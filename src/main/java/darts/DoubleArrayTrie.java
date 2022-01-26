@@ -397,7 +397,7 @@ public class DoubleArrayTrie {
 			n = base[p];
 
 			if (b == check[p] && n < 0) {
-				// base[t] + c = tc -> check[tc] = t && n < 0，说明是模式结尾
+				// base[p] == check[base[p]] && base[base[p]] < 0，说明是模式结尾
 				result.add(-n - 1);
 			}
 
